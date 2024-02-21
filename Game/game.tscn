@@ -2692,7 +2692,11 @@ position = Vector2(409, 16)
 texture = ExtResource("9_c3ufb")
 =======
 [node name="MageGuardian-magenta" type="Sprite2D" parent="."]
+<<<<<<< Updated upstream
 position = Vector2(-1367, -61)
+=======
+position = Vector2(746, -86)
+>>>>>>> Stashed changes
 scale = Vector2(4.71875, 4.71875)
 texture = ExtResource("9_nf3lt")
 >>>>>>> Stashed changes
