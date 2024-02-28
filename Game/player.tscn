@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://cfiy68xjd50yt" path="res://Art/SimpleCharacter/Girl-Sheet.png" id="1_5b6tr"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_buk1g"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_0maca"]
-radius = 6.08276
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x588c"]
+size = Vector2(12, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rbrmw"]
 atlas = ExtResource("1_5b6tr")
@@ -652,13 +652,16 @@ states/run/position = Vector2(475, 154)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_brq3w"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_6pcuv"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_nuqlf")]
 
 [node name="player" type="CharacterBody2D"]
+z_index = 1
 collision_layer = 2
 script = ExtResource("1_buk1g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_0maca")
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_x588c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_anfbq")
 animation = &"idle"
